@@ -1,0 +1,4 @@
+baseURL = "http://www.petterviklund.se"
+languageCode = "en-us"
+title = "Fotograf Petter Viklund"
+theme="dimension"
