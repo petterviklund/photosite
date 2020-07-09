@@ -1,4 +1,4 @@
-baseURL = "http://www.petterviklund.se"
+baseURL = "https://www.petterviklund.se"
 languageCode = "en-us"
 title = "Fotograf Petter Viklund"
 theme="dimension"
