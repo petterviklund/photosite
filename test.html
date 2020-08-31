@@ -1,0 +1,35 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Preload site</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script>
+    function CheckAndRedirect(secounds, url) {
+        var interval = setInterval(function () {
+            secounds = secounds - 1;
+            //Finished loading then go to url
+            if (secounds == 0) {
+                clearInterval(interval);
+                $(document).ready(function () {
+                    var customer = '/customer/sv-SE/demoshoppen/Reclaim/ConsumerLogin?key=E5CF8746-FC16-4A9C-909F-14AC7AF4BEEF';
+                    var uri = "https://test.reclaimit.com";
+                    var url = uri + customer;
+                    window.location = url;
+                })
+            }
+        }, 1000);
+    }
+//When ready start count to load url
+$(document).ready(function () {
+    //call
+    CheckAndRedirect(1, document.URL);
+});
+</script>
+
+<body>
+    <h1>Loading...</h1>
+</body>
+</html>
+
